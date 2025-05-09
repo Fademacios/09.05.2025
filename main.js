@@ -1,20 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('formularz');
   const kolorInput = document.getElementById('kolor');
-  const wynik = document.getElementById('wynik');
+  const wynikDiv = document.getElementById('wynik');
+  const czyscBtn = document.getElementById('czysc');
 
   form.addEventListener('submit', function () {
-    wynik.textContent = document.getElementById('imie').value + ' ' + document.getElementById('nazwisko').value + 
-                        (document.getElementById('pelnoletni').checked ? ' jest pełnoletni' : ' nie jest pełnoletni');
-    wynik.style.color = kolorInput.value;
+    const imie = document.getElementById('imie').value;
+    const nazwisko = document.getElementById('nazwisko').value;
+    const pelnoletni = document.getElementById('pelnoletni').checked;
+    const kolor = kolorInput.value;
+
+    const pelnoletniTekst = pelnoletni ? 'jest pełnoletni' : 'nie jest pełnoletni';
+    const tekst = imie + ' ' + nazwisko + ' ' + pelnoletniTekst;
+
+    wynikDiv.textContent = tekst;
+    wynikDiv.style.color = kolor;
   });
 
-  document.getElementById('czysc').addEventListener('click', function () {
+  czyscBtn.addEventListener('click', function () {
     form.reset();
-    wynik.textContent = '';
-    wynik.style.color = 'black';
+    wynikDiv.textContent = '';
+    wynikDiv.style.color = 'black';
   });
 });
+
+
 
 
 
