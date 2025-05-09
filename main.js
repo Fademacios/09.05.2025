@@ -19,12 +19,18 @@ document.addEventListener('DOMContentLoaded', function () {
     wynikDiv.style.color = kolor;
   });
 
+  kolorInput.addEventListener('input', function () {
+    wynikDiv.style.backgroundColor = kolorInput.value;
+  });
+
   czyscBtn.addEventListener('click', function () {
     form.reset();
     wynikDiv.textContent = '';
+    wynikDiv.style.backgroundColor = 'transparent';
     wynikDiv.style.color = 'black';
   });
 });
+
 
 
 
