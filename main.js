@@ -1,9 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
   const kolorInput = document.getElementById('kolor');
 
-  kolorInput.addEventListener('input', (event) => {
-    const wybranyKolor = event.target.value;
-    document.body.style.backgroundColor = wybranyKolor;
-  });
+  if (kolorInput) {
+    kolorInput.addEventListener('input', function () {
+      const wybranyKolor = kolorInput.value;
+      document.body.style.backgroundColor = wybranyKolor;
+    });
+  }
 });
 
