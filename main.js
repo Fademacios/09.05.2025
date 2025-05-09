@@ -14,15 +14,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const tekst = imie + ' ' + nazwisko + ' ' + pelnoletniTekst;
 
     wynikDiv.textContent = tekst;
-    wynikDiv.style.color = kolor;
+    wynikDiv.style.color = kolor; 
   });
 
   czyscBtn.addEventListener('click', function () {
     form.reset();
     wynikDiv.textContent = '';
-    wynikDiv.style.color = 'black';
+    wynikDiv.style.color = 'black'; 
   });
 });
+
 
 
 
