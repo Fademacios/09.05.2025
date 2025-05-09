@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const wynikDiv = document.getElementById('wynik');
   const czyscBtn = document.getElementById('czysc');
 
-  form.addEventListener('submit', function () {
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
     const imie = document.getElementById('imie').value;
     const nazwisko = document.getElementById('nazwisko').value;
     const pelnoletni = document.getElementById('pelnoletni').checked;
