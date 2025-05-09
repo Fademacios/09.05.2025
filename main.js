@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const kolorInput = document.getElementById('kolor');
   const wynikDiv = document.getElementById('wynik');
   const czyscBtn = document.getElementById('czysc');
-  let tekstKlikniety = false; 
 
   form.addEventListener('submit', function () {
     const imie = document.getElementById('imie').value;
@@ -15,26 +14,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const tekst = imie + ' ' + nazwisko + ' ' + pelnoletniTekst;
 
     wynikDiv.textContent = tekst;
-    wynikDiv.style.color = kolor;  
-    wynikDiv.style.backgroundColor = '';
-  });
-
-  wynikDiv.addEventListener('click', function () {
-    tekstKlikniety = true;  
-  });
-
-  kolorInput.addEventListener('input', function () {
-    if (tekstKlikniety) {
-      wynikDiv.style.backgroundColor = kolorInput.value;  
-    }
+    wynikDiv.style.color = kolor;  // Ustawiamy tylko kolor tekstu, bez tła
   });
 
   czyscBtn.addEventListener('click', function () {
     form.reset();
     wynikDiv.textContent = '';
-    wynikDiv.style.color = 'black';  
-    wynikDiv.style.backgroundColor = ''; 
-    tekstKlikniety = false;  
+    wynikDiv.style.color = 'black';  // Resetujemy kolor tekstu do czarnego
   });
 });
 
