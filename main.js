@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const czyscBtn = document.getElementById('czysc');
 
   form.addEventListener('submit', function (event) {
-    event.preventDefault();
+    event.preventDefault(); 
 
     const imie = document.getElementById('imie').value;
     const nazwisko = document.getElementById('nazwisko').value;
@@ -19,17 +19,13 @@ document.addEventListener('DOMContentLoaded', function () {
     wynikDiv.style.color = kolor;
   });
 
-  kolorInput.addEventListener('input', function () {
-    wynikDiv.style.backgroundColor = kolorInput.value;
-  });
-
   czyscBtn.addEventListener('click', function () {
     form.reset();
     wynikDiv.textContent = '';
-    wynikDiv.style.backgroundColor = 'transparent';
     wynikDiv.style.color = 'black';
   });
 });
+
 
 
 
