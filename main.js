@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const tekst = imie + ' ' + nazwisko + ' ' + pelnoletniTekst;
 
     wynikDiv.textContent = tekst;
-    wynikDiv.style.color = kolor;  // Ustawiamy tylko kolor tekstu, bez tła
+    wynikDiv.style.color = kolor;
   });
 
   czyscBtn.addEventListener('click', function () {
     form.reset();
     wynikDiv.textContent = '';
-    wynikDiv.style.color = 'black';  // Resetujemy kolor tekstu do czarnego
+    wynikDiv.style.color = 'black';
   });
 });
 
